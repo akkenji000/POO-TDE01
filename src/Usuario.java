@@ -2,13 +2,13 @@ public class Usuario {
     //Definir Atributos
     String nome;
     int id;
-    boolean aluno;
+    String tipoUsuario;
 
     //Contructor para "molde" de Úsuario
-    public Usuario(String nome, int id, boolean aluno){
+    public Usuario(String nome, int id, String tipoUsuario){
         this.nome = nome;
         this.id = id;
-        this.aluno = aluno;
+        this.tipoUsuario = tipoUsuario;
     }
 
     public String getNome() {
@@ -19,7 +19,9 @@ public class Usuario {
         return id;
     }
 
-    public boolean usuarioAluno(){
-        return aluno = true;
+    public String getTipoUsuario() {
+        return tipoUsuario;
     }
+
+
 }
