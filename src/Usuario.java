@@ -1,15 +1,16 @@
-public class Usuario {
+public  class Usuario {
     //Definir Atributos
     private String nome;
     private int id;
-    private String tipoUsuario;
+    //private String tipoUsuario;
 
-    //Contructor para "molde" de Úsuario
-    public Usuario(String nome, int id, String tipoUsuario){
+    //Contructor para inicializar Usuário
+    public Usuario(String nome, int id){
         this.nome = nome;
         this.id = id;
-        this.tipoUsuario = tipoUsuario;
+        //this.tipoUsuario = tipoUsuario;
     }
+
 
     //get para Nome, ID, Tipo Usuário
     public String getNome() {
@@ -20,7 +21,5 @@ public class Usuario {
         return id;
     }
 
-    public String getTipoUsuario() {
-        return tipoUsuario;
-    }
+
 }
