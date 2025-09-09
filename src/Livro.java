@@ -5,4 +5,12 @@ public class Livro {
     int ano;
     int ISBN;
     int quantidadeDisponivel;
+
+    public String getTitulo(){
+        return titulo;
+    }
+
+    public int getQuantidadeDisponivel(){
+        return quantidadeDisponivel;
+    }
 }
