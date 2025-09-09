@@ -5,7 +5,4 @@ public class Livro {
     int ano;
     int ISBN;
     int quantidadeDisponivel;
-
-
-
 }
