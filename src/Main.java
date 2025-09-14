@@ -1,5 +1,8 @@
 public class Main {
     public static void main(String [] args) {
+        //Instanciar Biblioteca
+        Biblioteca biblioteca = new Biblioteca();
+
         //Criação de usuarios alunos e professores
         Usuario Aluno01 = new Aluno("Ronaldo", 1);
         Usuario Professor01 = new Professor("Lebron", 2);

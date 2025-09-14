@@ -19,4 +19,9 @@ public class Emprestimo {
     public void finalizarEmprestimo(){
         this.dataDevolucaoReal = LocalDate.now();
     }
+
+    @Override
+    public String toString() {
+        return "Emprestimo [Livro: " + livro.getTitulo() + ", Usuário: " + usuario.getNome() + ", Data Empréstimo: " + dataEmprestimo + ", Devolução Prevista: " + dataDevolucaoPrevista + "]";
+    }
 }
