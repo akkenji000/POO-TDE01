@@ -1,6 +1,6 @@
 public class Professor extends Usuario{
     private int prazoDevolucao = 30;
-    public Professor(String nome, int id) {
+    public Professor(String nome, String id) {
         super(nome, id);
     }
     @Override

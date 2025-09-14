@@ -1,7 +1,7 @@
 public class Aluno extends Usuario{
     private int prazoDevolucao = 15;
 
-    public Aluno(String nome, int id) {
+    public Aluno(String nome, String id) {
         super(nome, id);
     }
 

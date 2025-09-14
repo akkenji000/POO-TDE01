@@ -21,9 +21,22 @@ public class Biblioteca {
     }
 
     public Usuario buscarUsuarioPorID(String id){
-
+        for (Usuario usuario : usuarios) {
+            if (usuario.getId().equals(id)){
+                return usuario;
+            }
+        }
+        return null;
     }
+
+    public Livro buscarLivroPorISBN (String ISBN){
+        for (Livro livro : livros){
+            if (livro.getISBN().equals(ISBN)){
+                return livro;
+            }
+        }
+        return null;
+    }
+
     
-
-
 }

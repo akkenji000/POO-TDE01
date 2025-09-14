@@ -3,11 +3,11 @@ public class Livro {
     private String titulo;
     private String autor;
     private int ano;
-    private int ISBN;
+    private String ISBN;
     private int quantidadeDisponivel;
 
     //Constructor Livro
-    public Livro(String titulo, String autor, int ano, int ISBN, int quantidadeDisponivel){
+    public Livro(String titulo, String autor, int ano, String ISBN, int quantidadeDisponivel){
         this.titulo = titulo;
         this.autor = autor;
         this.ano = ano;
@@ -26,7 +26,7 @@ public class Livro {
         return ano;
     }
 
-    public int getISBN() {
+    public String getISBN() {
         return ISBN;
     }
 
@@ -46,7 +46,7 @@ public class Livro {
         this.ano = ano;
     }
 
-    public void setISBN(int ISBN) {
+    public void setISBN(String ISBN) {
         this.ISBN = ISBN;
     }
 
