@@ -6,6 +6,15 @@ public class Livro {
     private int ISBN;
     private int quantidadeDisponivel;
 
+    //Constructor Livro
+    public Livro(String titulo, String autor, int ano, int ISBN, int quantidadeDisponivel){
+        this.titulo = titulo;
+        this.autor = autor;
+        this.ano = ano;
+        this.ISBN = ISBN;
+        this.quantidadeDisponivel = quantidadeDisponivel;
+    }
+
     //Getters
     public String getTitulo(){
         return titulo;
@@ -43,5 +52,17 @@ public class Livro {
 
     public void setQuantidadeDisponivel(int quantidadeDisponivel) {
         this.quantidadeDisponivel = quantidadeDisponivel;
+    }
+
+    //Emprestar
+    public void emprestar(){
+        if (quantidadeDisponivel > 0){
+            quantidadeDisponivel--;
+        }
+    }
+
+    //Devolver
+    public void devolver(){
+        quantidadeDisponivel++;
     }
 }
