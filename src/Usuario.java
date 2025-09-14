@@ -1,4 +1,4 @@
-public  class Usuario {
+public abstract class Usuario {
     //Definir Atributos
     private String nome;
     private int id;
@@ -21,5 +21,6 @@ public  class Usuario {
         return id;
     }
 
-
+    //Método abstrato para Polimorfismo
+    public abstract int calcularPrazoDevolucao();
 }

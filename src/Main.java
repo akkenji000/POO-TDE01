@@ -1,8 +1,11 @@
 public class Main {
     public static void main(String [] args) {
         //Criação de usuarios alunos e professores
-        Usuario Aluno01 = new Usuario("Ronaldo", 1);
-        Usuario Professor01 = new Usuario("Lebron", 2);
+        Usuario Aluno01 = new Aluno("Ronaldo", 1);
+        Usuario Professor01 = new Professor("Lebron", 2);
+
+        //Criação Livros
+        Livro livro01 = new Livro("teste01", "autorTeste", 2000, 0000, 300);
 
 
         System.out.println("O Usuário ID: " + Aluno01.getId() + ", Nome: " + Aluno01.getNome() + ", Cargo: ");
