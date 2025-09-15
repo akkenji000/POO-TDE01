@@ -16,23 +16,11 @@ public class Livro {
     }
 
     //Getters
-    public String getTitulo(){
-        return titulo;
-    }
-    public String getAutor() {
-        return autor;}
-
-    public int getAno() {
-        return ano;
-    }
-
-    public String getISBN() {
-        return ISBN;
-    }
-
-    public int getQuantidadeDisponivel(){
-        return quantidadeDisponivel;
-    }
+    public String getTitulo(){return titulo;}
+    public String getAutor() {return autor;}
+    public int getAno() {return ano;}
+    public String getISBN() {return ISBN;}
+    public int getQuantidadeDisponivel(){return quantidadeDisponivel;}
     //Setters
     public void setTitulo(String titulo) {
         this.titulo = titulo;

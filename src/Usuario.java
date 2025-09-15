@@ -8,18 +8,16 @@ public abstract class Usuario {
     public Usuario(String nome, String id){
         this.nome = nome;
         this.id = id;
-        //this.tipoUsuario = tipoUsuario;
     }
-
-
+    
     //get para Nome, ID, Tipo Usuário
     public String getNome() {
         return nome;
     }
-
     public String getId() {
         return id;
     }
+    public abstract String getTipo();
 
     //Método abstrato para Polimorfismo
     public abstract int calcularPrazoDevolucao();

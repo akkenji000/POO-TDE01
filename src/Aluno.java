@@ -5,10 +5,11 @@ public class Aluno extends Usuario{
         super(nome, id);
     }
 
+    @Override
+   public int calcularPrazoDevolucao(){return prazoDevolucao;}
+
    @Override
-   public int calcularPrazoDevolucao(){
-        return prazoDevolucao;
-   }
+    public String getTipo(){return "Aluno";}
 }
 
 

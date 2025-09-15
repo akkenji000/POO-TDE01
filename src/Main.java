@@ -16,7 +16,7 @@ public class Main {
         biblioteca.cadastrarUsuario(Professor01);
 
 
-        System.out.println("O Usuário ID: " + Aluno01.getId() + ", Nome: " + Aluno01.getNome() + ", Cargo: ");
-        System.out.println("O Usuário ID: " + Professor01.getId() + ", Nome: " + Professor01.getNome() + ", Cargo: ");
+        System.out.println("O Usuário ID: " + Aluno01.getId() + ", Nome: " + Aluno01.getNome() + ", Tipo: " + Aluno01.getTipo());
+        System.out.println("O Usuário ID: " + Professor01.getId() + ", Nome: " + Professor01.getNome() + ", Cargo: " + Professor01.getTipo());
     }
 }

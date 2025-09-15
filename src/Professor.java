@@ -4,7 +4,8 @@ public class Professor extends Usuario{
         super(nome, id);
     }
     @Override
-    public int calcularPrazoDevolucao(){
-        return prazoDevolucao;
-    }
+    public int calcularPrazoDevolucao(){return prazoDevolucao;}
+
+    @Override
+    public String getTipo(){return "Professor";}
 }
