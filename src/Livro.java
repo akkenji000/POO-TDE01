@@ -22,25 +22,11 @@ public class Livro {
     public String getISBN() {return ISBN;}
     public int getQuantidadeDisponivel(){return quantidadeDisponivel;}
     //Setters
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public void setAutor(String autor) {
-        this.autor = autor;
-    }
-
-    public void setAno(int ano) {
-        this.ano = ano;
-    }
-
-    public void setISBN(String ISBN) {
-        this.ISBN = ISBN;
-    }
-
-    public void setQuantidadeDisponivel(int quantidadeDisponivel) {
-        this.quantidadeDisponivel = quantidadeDisponivel;
-    }
+    public void setTitulo(String titulo) {this.titulo = titulo;}
+    public void setAutor(String autor) {this.autor = autor;}
+    public void setAno(int ano) {this.ano = ano;}
+    public void setISBN(String ISBN) {this.ISBN = ISBN;}
+    public void setQuantidadeDisponivel(int quantidadeDisponivel) {this.quantidadeDisponivel = quantidadeDisponivel;}
 
     //Emprestar
     public void emprestar(){
@@ -48,7 +34,6 @@ public class Livro {
             quantidadeDisponivel--;
         }
     }
-
     //Devolver
     public void devolver(){
         quantidadeDisponivel++;
