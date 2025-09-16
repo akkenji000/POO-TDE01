@@ -1,5 +1,5 @@
 import java.time.LocalDate; //import de data
-import java.util.concurrent.LinkedBlockingDeque;
+
 
 public class Emprestimo {
     private Usuario usuario;
@@ -10,8 +10,8 @@ public class Emprestimo {
     public Emprestimo(Livro livro, Usuario usuario){
         this.livro = livro;
         this.usuario = usuario;
-        this.dataEmprestimo = dataEmprestimo;
-        this.dataDevolucaoReal = dataDevolucaoReal;
+        this.dataEmprestimo = LocalDate.now();
+        this.dataDevolucaoReal = null;
     }
 
     //Getters/Setters
@@ -19,7 +19,7 @@ public class Emprestimo {
     public Usuario getUsuario(){return usuario;}
     public LocalDate getDataEmprestimo() {return dataEmprestimo;}
     public LocalDate getDataDevolucaoReal() {return dataDevolucaoReal;}
-
+    public LocalDate setDataDevolucaoReal() {return this.dataDevolucaoReal = dataDevolucaoReal;}
 
     public String statusEmprestimo(){
         if (getDataDevolucaoReal() != null){

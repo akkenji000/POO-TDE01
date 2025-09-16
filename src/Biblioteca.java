@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Biblioteca {
@@ -29,16 +30,16 @@ public class Biblioteca {
         return null;
     }
 
-    public String listarUsuarios() {
+    public void listarUsuarios() {
         for (Usuario usuario : usuarios) {
-            System.out.println("ID: " + usuario.getId() + ", Nome: " +  usuario.getNome() + ", Tipo: " + usuario.getTipo());
-        } return null;
+            System.out.println(">>ID: " + usuario.getId() + ", Nome: " +  usuario.getNome() + ", Tipo: " + usuario.getTipo());
+        }
     }
 
     public void listarEmprestimos(){
         for (Emprestimo emprestimo : emprestimos){
-            System.out.println("UserID: " + emprestimo.getUsuario() +
-                    ", Livro: " + emprestimo.getLivro() + ",Dt Emprestimo: " + emprestimo.getDataEmprestimo()  + "Status: " + emprestimo.statusEmprestimo());
+            System.out.println(">>UserID: " + emprestimo.getUsuario().getId() +
+                    "; >>Livro: " + emprestimo.getLivro().getTitulo() + "; >>Tipo: " + emprestimo.getUsuario().getTipo() + "; >>Dt Emprestimo: " + emprestimo.getDataEmprestimo()  + "; >>Status: " + emprestimo.statusEmprestimo());
         }
     }
 
@@ -63,8 +64,19 @@ public class Biblioteca {
             Emprestimo novoEmprestimo = new Emprestimo(livro, usuario);
             emprestimos.add(novoEmprestimo);
             System.out.println("Empréstimo realizado com sucesso!");
+            System.out.println("\n Unidades restantes: " + livro.getQuantidadeDisponivel());
         } else {
             System.out.println("Não foi possível realizar o empréstimo.");
+            System.out.println("\n Revise as informações e tente novamente!");
         }
     }
+
+    public void realizarDevolucao(String titulo, String id) {
+        for (Emprestimo emprestimo : emprestimos) {
+            if (emprestimo.getLivro().getTitulo().equals(titulo) &&
+                    emprestimo.getUsuario().getId().equals(id) &&
+                    emprestimo.getDataDevolucaoReal() == null) {
+                emprestimo.setDataDevolucaoReal();
+            }
+        }
 }
