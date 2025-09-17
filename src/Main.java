@@ -5,7 +5,7 @@ public class Main {
         System.out.println("=============================================");
 
         // 1. SETUP INICIAL: Criando a biblioteca e cadastrando os itens
-        System.out.println("\n--- 1. Realizando Cadastros Iniciais ---");
+        System.out.println("\n--- Realizando Cadastros Iniciais ---");
         Biblioteca biblioteca = new Biblioteca();
 
         // Cadastrando Livros
@@ -45,7 +45,7 @@ public class Main {
         Usuario aluno02 = new Aluno("Fenomeno", "2"); // Cadastrando um novo aluno
         biblioteca.cadastrarUsuario(aluno02);
         System.out.println("\n>> Aluno 'Fenomeno' tentando pegar 'O Senhor dos Anéis' (que já foi emprestado):");
-        biblioteca.realizarEmprestimo("O Senhor dos Anéis", "1"); // Tenta pegar o mesmo livro, agora com 0 disponíveis
+        biblioteca.realizarEmprestimo("O Senhor dos Anéis", "1");
 
         // Realizando devolução
         System.out.println("\n--- Realizando Devoluções ---");
