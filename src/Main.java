@@ -46,6 +46,7 @@ public class Main {
         biblioteca.cadastrarUsuario(aluno02);
         System.out.println("\n>> Aluno 'Fenomeno' tentando pegar 'O Senhor dos Anéis' (que já foi emprestado):");
         biblioteca.realizarEmprestimo("O Senhor dos Anéis", "1");
+        biblioteca.realizarEmprestimo("O Senhor dos Anéis", "2");
 
         // Realizando devolução
         System.out.println("\n--- Realizando Devoluções ---");
