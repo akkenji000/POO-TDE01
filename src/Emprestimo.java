@@ -19,7 +19,6 @@ public class Emprestimo {
     public Usuario getUsuario(){return usuario;}
     public LocalDate getDataEmprestimo() {return dataEmprestimo;}
     public LocalDate getDataDevolucaoReal() {return dataDevolucaoReal;}
-    public LocalDate setDataDevolucaoReal() {return this.dataDevolucaoReal = dataDevolucaoReal;}
 
     public String statusEmprestimo(){
         if (getDataDevolucaoReal() != null){
@@ -30,7 +29,7 @@ public class Emprestimo {
         }
     }
 
-    public void finalizarEmprestimo(){
+    public void setDataDevolucaoReal(){
         this.dataDevolucaoReal = LocalDate.now();
     }
 

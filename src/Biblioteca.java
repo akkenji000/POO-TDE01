@@ -72,11 +72,53 @@ public class Biblioteca {
     }
 
     public void realizarDevolucao(String titulo, String id) {
+        Emprestimo emprestimoParaFinalizar = null;
         for (Emprestimo emprestimo : emprestimos) {
             if (emprestimo.getLivro().getTitulo().equals(titulo) &&
                     emprestimo.getUsuario().getId().equals(id) &&
                     emprestimo.getDataDevolucaoReal() == null) {
-                emprestimo.setDataDevolucaoReal();
+                emprestimoParaFinalizar = emprestimo;
+                break; // Encontrou o empréstimo, pode parar o loop
             }
         }
-}}
+
+        if (emprestimoParaFinalizar != null) {
+            emprestimoParaFinalizar.setDataDevolucaoReal(); //Atualiza a data de devolução no empréstimo
+            emprestimoParaFinalizar.getLivro().devolver();  //Aumenta a quantidade disponível do livro
+            System.out.println("Devolução do livro '" + titulo + "' realizada com sucesso!");
+        } else {
+            System.out.println("Não foi possível encontrar um empréstimo ativo para este livro e usuário.");
+        }
+    }
+    // Listagens diferentes
+    public void listarTodosOsLivros() {
+        System.out.println("\n--- Catálogo de Livros ---");
+        for (Livro livro : livros) {
+            System.out.println(">> Título: " + livro.getTitulo() + "; Autor: " + livro.getAutor() + "; Disponíveis: " + livro.getQuantidadeDisponivel());
+        }
+    }
+
+    public void listarEmprestimosAtivos() {
+        System.out.println("\n--- Relatório de Empréstimos Ativos ---");
+        for (Emprestimo emprestimo : emprestimos) {
+            if (emprestimo.getDataDevolucaoReal() == null) { // A condição chave é esta!
+                System.out.println(">> Usuário: " + emprestimo.getUsuario().getNome() + "; Livro: " + emprestimo.getLivro().getTitulo() + "; Data: " + emprestimo.getDataEmprestimo());
+            }
+        }
+    }
+
+    public void historicoEmprestimosUsuario(String id) {
+        Usuario usuario = buscarUsuarioPorID(id);
+        if (usuario == null) {
+            System.out.println("Usuário com ID " + id + " não encontrado.");
+            return;
+        }
+
+        System.out.println("\n--- Histórico de Empréstimos para: " + usuario.getNome() + " ---");
+        for (Emprestimo emprestimo : emprestimos) {
+            if (emprestimo.getUsuario().getId().equals(id)) {
+                System.out.println(">> Livro: " + emprestimo.getLivro().getTitulo() + "; Status: " + emprestimo.statusEmprestimo());
+            }
+        }
+    }
+}
