@@ -4,7 +4,7 @@ public class Main {
         System.out.println("==== INICIANDO SISTEMA DE BIBLIOTECA ====");
         System.out.println("=============================================");
 
-        //SETUP INICIAL: Criando a biblioteca e cadastrando os itens
+        //SETUP INICIAL Criando a biblioteca e cadastrando os itens
         System.out.println("\n--- Realizando Cadastros Iniciais ---");
         Biblioteca biblioteca = new Biblioteca();
 
